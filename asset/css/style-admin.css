@@ -1,0 +1,170 @@
+/* Main  */
+.Main {
+    position: absolute;
+    top: 60px;
+    width: 90%;
+    min-height: calc(100vh - 60px);
+    left: 230px;
+    background: #f5f5f5;
+  }
+  .MainCard {
+    width: 100%;
+    padding: 35px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  .MainCard .Card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: var(--box_shadow);
+    transition: 0.2s;
+  }
+  .Card:hover {
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  .Card .num {
+    color: var(--main);
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .Card .name {
+    font-weight: 600;
+    color: #333;
+  }
+  .Card:hover .name {
+    color: #fff;
+  }
+  .Card .icon i {
+    color: var(--main);
+    font-size: 45px;
+  }
+  
+  /* Charts */
+  .MainChart {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+  }
+  .MainChart .Chart {
+    background: #fff;
+    box-shadow: var(--box_shadow);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .MainChart .Chart h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  /* Media Query */
+  @media (max-width: 1115px) {
+    .SideBar {
+      width: 60px;
+    }
+    .Main {
+      left: 60px;
+      width: calc(100% - 60px);
+    }
+  }
+  @media (max-width: 880px) {
+    .fa-bell {
+      justify-self: left;
+    }
+    .MainCard {
+      padding: 35px 20px;
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+    .MainChart {
+      grid-template-columns: 1fr;
+    }
+    .doughnut-chart {
+      padding: 50px;
+    }
+    #doughnut {
+      padding: 50px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .TopBar {
+      grid-template-columns: 1fr 5fr 0.4fr 1fr;
+    }
+    .logo h1 {
+      font-size: 20px;
+    }
+    .Search {
+      width: 80%;
+    }
+    .Search input {
+      padding: 0 20px;
+    }
+    .fa-bell {
+      margin-right: 5px;
+    }
+    .MainCard {
+      grid-template-columns: 1fr;
+    }
+    .doughnut-chart {
+      padding: 10px;
+    }
+    #doughnut {
+      padding: 0px;
+    }
+    .user {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+ /* dropdown */
+
+  .dropbtn {
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: flex;
+
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
